@@ -1,50 +1,13 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="static/imgs/favicon.svg">
-    <title>Livros - Projeto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{% static 'styles.css' %}" />
-</head>
+{% block title %}Página Inicial{% endblock %}
 
-<body>
-    <!-- Cabeçalho -->
-    <header class="gradient d-flex justify-content-between align-items-center p-3 bg-shadow">
-        <h1><a class="branco text-decoration-none" href="{% url 'home' %}">TÍTULO PROJETO</a></h1>
-        <nav>
-            <ul class="nav">
-                <li class="nav-item d-none d-md-inline-block">
-                    <a class="nav-link text-white" href="{% url 'home' %}">Início</a>
-                </li>
-                <li class="nav-item d-none d-md-inline-block">
-                    <a class="nav-link text-white" href="{% url 'livro' %}">Livro</a>
-                </li>
-                <li class="nav-item d-none d-md-inline-block">
-                    <a class="nav-link verdeTexto bg-white rounded-5 fw-bold" href="{% url 'sobre' %}">Sobre</a>
-                </li>
-                <div class="dropdown">
-                    <button class="verdeTexto fw-bold btn btn-light dropdown-toggle d-sm-none" type="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Sobre
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="verdeTexto fw-bold dropdown-item" href="{% url 'home' %}">Inicio</a></li>
-                        <li><a class="verdeTexto fw-bold dropdown-item" href="{% url 'livro' %}">Livro</a></li>
-                        <li><a class="verde fw-bold dropdown-item" href="{% url 'sobre' %}">Sobre</a></li>
-                    </ul>
-                </div>
-            </ul>
-        </nav>
-    </header>
-
+{% block content %}
     <!-- Seção de apresentação -->
     <section class="gradient py-5 text-center">
         <div class="container">
-            <img src="static/imgs/whitestar.svg" alt="White Star" height="50" />
+            <img src="{% static 'imgs/whitestar.svg' %}" alt="White Star" height="50" />
             <h1 class="my-4">Sobre nós!</h1>
         </div>
     </section>
@@ -73,22 +36,22 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4 d-none d-md-block">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel1.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel1.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                         <div class="col-md-4 d-none d-md-block">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel2.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel2.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                         <div class="col-md-4 d-none d-md-block">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel3.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel3.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                         <div class="col-12 d-block d-md-none">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel1.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel1.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                     </div>
@@ -99,22 +62,22 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4 d-none d-md-block">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel4.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel4.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                         <div class="col-md-4 d-none d-md-block">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel5.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel5.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                         <div class="col-md-4 d-none d-md-block">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel6.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel6.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                         <div class="col-12 d-block d-md-none">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel4.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel4.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                     </div>
@@ -125,22 +88,22 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4 d-none d-md-block">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel7.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url({% static 'imgs/imgcarrosel7.jpeg' %}); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                         <div class="col-md-4 d-none d-md-block">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel8.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel8.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                         <div class="col-md-4 d-none d-md-block">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel9.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel9.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                         <div class="col-12 d-block d-md-none">
                             <div class="news-card rounded"
-                                style="background-image: url('static/imgs/imgcarrosel7.jpeg'); height: 400px; background-size: cover; background-position: center;">
+                                style="background-image: url('{% static 'imgs/imgcarrosel7.jpeg' %}'); height: 400px; background-size: cover; background-position: center;">
                             </div>
                         </div>
                     </div>
@@ -174,7 +137,7 @@
                     </p>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="static/imgs/capa.jpg" height="200" class="rounded shadow" alt="Capa do Livro">
+                    <img src="{% static 'imgs/capa.jpg' %}" height="200" class="rounded shadow" alt="Capa do Livro">
                 </div>
             </div>
         </div>
@@ -184,7 +147,6 @@
     <section class="container my-5">
         <div class="d-flex align-items-center justify-content-center gap-3">
             <h2 class="fw-bold verdeTexto text-uppercase mb-0">Nossa Equipe</h2>
-            <img src="static/imgs/greenStar.svg" alt="Estrela Verde" height="50">
         </div>
         <p class="verdinho lead text-center mb-5">Conheça os membros da nossa equipe que tornaram este projeto possível.
         </p>
@@ -194,17 +156,17 @@
                 <div class="carousel-item active">
                     <div class="row justify-content-center">
                         <div class="col-md-4">
-                            <img src="static/imgs/perfil.png" class="rounded-circle" width="150" alt="Membro 1">
+                            <img src="{% static 'imgs/perfil.png' %}" class="rounded-circle" width="150" alt="Membro 1">
                             <h5 class="verdeTexto mt-2 fw-bold">Ilustrador 1</h5>
                             <p class="verdinho fw-bold">Ilustrador</p>
                         </div>
                         <div class="col-md-4">
-                            <img src="static/imgs/perfil.png" class="rounded-circle" width="150" alt="Membro 2">
+                            <img src="{% static 'imgs/perfil.png' %}" class="rounded-circle" width="150" alt="Membro 2">
                             <h5 class="verdeTexto mt-2 fw-bold">Orientador</h5>
                             <p class="verdinho fw-bold">Orientador</p>
                         </div>
                         <div class="col-md-4">
-                            <img src="static/imgs/perfil.png" class="rounded-circle" width="150" alt="Membro 3">
+                            <img src="{% static 'imgs/perfil.png' %}" class="rounded-circle" width="150" alt="Membro 3">
                             <h5 class="verdeTexto mt-2 fw-bold">Ilustrador 2</h5>
                             <p class="verdinho fw-bold">Ilustrador</p>
                         </div>
@@ -213,17 +175,17 @@
                 <div class="carousel-item">
                     <div class="row justify-content-center">
                         <div class="col-md-4">
-                            <img src="static/imgs/perfil.png" class="rounded-circle" width="150" alt="Membro 4">
+                            <img src="{% static 'imgs/perfil.png' %}" class="rounded-circle" width="150" alt="Membro 4">
                             <h5 class="verdeTexto mt-2 fw-bold">Escritor 1</h5>
                             <p class="verdinho fw-bold">Escritor</p>
                         </div>
                         <div class="col-md-4">
-                            <img src="static/imgs/perfil.png" class="rounded-circle" width="150" alt="Membro 5">
+                            <img src="{% static 'imgs/perfil.png' %}" class="rounded-circle" width="150" alt="Membro 5">
                             <h5 class="verdeTexto mt-2 fw-bold">Escritor 2</h5>
                             <p class="verdinho fw-bold">Escritor</p>
                         </div>
                         <div class="col-md-4">
-                            <img src="static/imgs/perfil.png" class="rounded-circle" width="150" alt="Membro 6">
+                            <img src="{% static 'imgs/perfil.png' %}" class="rounded-circle" width="150" alt="Membro 6">
                             <h5 class="verdeTexto mt-2">Ellainy Nayara</h5>
                             <p class="verdinho fw-bold">Desenvolvimento do site</p>
                         </div>
@@ -242,14 +204,4 @@
             </button>
         </div>
     </section>
-
-
-    <!-- Rodapé -->
-    <footer class="verde text-white text-center p-3 mt-5">
-        <p>&copy; Campus São Paulo do Potengi | Projeto de Extensão</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+{% endblock %}

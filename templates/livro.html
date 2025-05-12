@@ -1,45 +1,13 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="static/imgs/favicon.svg">
-    <title>Leia o Livro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-</head>
+{% block title %}Página Inicial{% endblock %}
 
-<body>
-    <header class="gradient d-flex justify-content-between align-items-center p-3 shadow">
-        <h1><a class="branco text-decoration-none" href="{% url 'home' %}">TÍTULO PROJETO</a></h1>
-        <nav>
-            <ul class="nav">
-                <li class="nav-item d-none d-md-inline-block"><a class="nav-link text-white"
-                        href="{% url 'home' %}">Início</a></li>
-                <li class="nav-item d-none d-md-inline-block"><a class="nav-link verdeTexto bg-white rounded-5 fw-bold"
-                        href="{% url 'livro' %}">Livro</a></li>
-                <li class="nav-item d-none d-md-inline-block"><a class="nav-link text-white" href="{% url 'sobre' %}">Sobre</a>
-                </li>
-                <div class="dropdown">
-                    <button class="verdeTexto fw-bold btn btn-light dropdown-toggle d-sm-none" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Livro
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="verdeTexto fw-bold dropdown-item" href="{% url 'home' %}">Inicio</a></li>
-                        <li><a class="verde fw-bold dropdown-item" href="{% url 'livro' %}">Livro</a></li>
-                        <li><a class="verdeTexto fw-bold dropdown-item" href="{% url 'sobre' %}">Sobre</a></li>
-                    </ul>
-                </div>
-            </ul>
-        </nav>
-    </header>
+{% block content %}
     <!-- Seção de apresentação -->
     <section class="gradient py-5">
         <div class="container d-flex flex-column align-items-center">
-            <img src="static/imgs/whitebook.svg" alt="Livro Branco" height="50" />
+            <img src="{% static 'imgs/whitebook.svg' %}" alt="Livro Branco" height="50" />
             <h1 class="text-center fw-bold">Selecione o modo de leitura:</h1>
         </div>
     </section>
@@ -48,7 +16,7 @@
             <!-- Card do Livro 3D -->
             <div class="col-md-5">
                 <div class="card shadow-lg text-center p-4"
-                    style="border-radius: 15px; background: url('static/imgs/background_card.jpg') center/cover;">
+                    style="border-radius: 15px; background: url('{% static 'imgs/background_card.jpg' %}') center/cover;">
                     <img src="{% static 'imgs/capa.jpg' %}" class="card-img-top mx-auto mt-3 rounded shadow" alt="Livro 3D"
                         style="width: 80px;">
                     <div class="card-body">
@@ -62,13 +30,13 @@
             <!-- Card do Livro PDF -->
             <div class="col-md-5">
                 <div class="card shadow-lg text-center p-4"
-                    style="border-radius: 15px; background: url('static/imgs/background_card.jpg') center/cover;">
+                    style="border-radius: 15px; background: url('{% static 'imgs/background_card.jpg' %}') center/cover;">
                     <img src="{% static 'imgs/capa.jpg' %}" class="card-img-top mx-auto mt-3 rounded shadow" alt="Livro PDF"
                         style="width: 80px;">
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Ler Livro em PDF</h5>
                         <p class="card-text">Leia o livro em PDF ou faça o download para leitura offline.</p>
-                        <a href="static/livro.pdf" class="btn btn-primary btn-lg mt-2" target="_blank" rel="noopener noreferrer">
+                        <a href="{% static 'livro.pdf' %}" class="btn btn-primary btn-lg mt-2" target="_blank" rel="noopener noreferrer">
                             Abrir PDF
                           </a>                          
                     </div>
@@ -95,7 +63,7 @@
                     </p>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="static/imgs/whiteBook.svg" height="200" alt="Livro Branco">
+                    <img src="{% static 'imgs/whiteBook.svg' %}" height="200" alt="Livro Branco">
                 </div>
             </div>
         </div>
@@ -105,25 +73,18 @@
     <div class="container my-5">
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="news-card" style="background-image: url('static/imgs/imgcarrosel4.jpeg');">
+                <div class="news-card" style="background-image: url('{% static 'imgs/imgcarrosel4.jpeg' %}');">
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="news-card" style="background-image: url('static/imgs/imgcarrosel2.jpeg');">
+                <div class="news-card" style="background-image: url('{% static 'imgs/imgcarrosel2.jpeg' %}');">
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="news-card" style="background-image: url('static/imgs/imgcarrosel3.jpeg');">
+                <div class="news-card" style="background-image: url('{% static 'imgs/imgcarrosel3.jpeg' %}');">
                 </div>
             </div>
         </div>
     </div>
-
-    <footer class="verde text-white text-center p-3 mt-5">
-        <p>&copy; Campus São Paulo do Potengi | Projeto de Extensão</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+{% endblock %}
+   

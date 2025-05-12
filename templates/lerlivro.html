@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles2.css" />
+    <link rel="stylesheet" href="{% static 'styles2.css' %}" />
     <title>Um festival de mudanças!</title>
 </head>
 
@@ -105,8 +105,8 @@
         <div class="hard"></div>
     </div>
 
-    <script src="jquery.js"></script>
-    <script src="turn.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+    <script src="{% static 'turn.js' %}"></script>
     <script>
         function isMobile() {
             return window.innerWidth <= 1024; // Pode ajustar esse valor se quiser

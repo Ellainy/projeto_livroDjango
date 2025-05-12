@@ -14,17 +14,17 @@
 <body>
     <!-- Cabeçalho -->
     <header class="gradient d-flex justify-content-between align-items-center p-3 bg-shadow">
-        <h1><a class="branco text-decoration-none" href="index.html">TÍTULO PROJETO</a></h1>
+        <h1><a class="branco text-decoration-none" href="{% url 'home' %}">TÍTULO PROJETO</a></h1>
         <nav>
             <ul class="nav">
                 <li class="nav-item d-none d-md-inline-block">
-                    <a class="nav-link text-white" href="index.html">Início</a>
+                    <a class="nav-link text-white" href="{% url 'home' %}">Início</a>
                 </li>
                 <li class="nav-item d-none d-md-inline-block">
-                    <a class="nav-link text-white" href="livro.html">Livro</a>
+                    <a class="nav-link text-white" href="{% url 'livro' %}">Livro</a>
                 </li>
                 <li class="nav-item d-none d-md-inline-block">
-                    <a class="nav-link verdeTexto bg-white rounded-5 fw-bold" href="sobre.html">Sobre</a>
+                    <a class="nav-link verdeTexto bg-white rounded-5 fw-bold" href="{% url 'sobre' %}">Sobre</a>
                 </li>
                 <div class="dropdown">
                     <button class="verdeTexto fw-bold btn btn-light dropdown-toggle d-sm-none" type="button"
@@ -32,9 +32,9 @@
                         Sobre
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="verdeTexto fw-bold dropdown-item" href="index.html">Inicio</a></li>
-                        <li><a class="verdeTexto fw-bold dropdown-item" href="livro.html">Livro</a></li>
-                        <li><a class="verde fw-bold dropdown-item" href="sobre.html">Sobre</a></li>
+                        <li><a class="verdeTexto fw-bold dropdown-item" href="{% url 'home' %}">Inicio</a></li>
+                        <li><a class="verdeTexto fw-bold dropdown-item" href="{% url 'livro' %}">Livro</a></li>
+                        <li><a class="verde fw-bold dropdown-item" href="{% url 'sobre' %}">Sobre</a></li>
                     </ul>
                 </div>
             </ul>

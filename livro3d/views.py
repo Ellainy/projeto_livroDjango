@@ -8,3 +8,6 @@ def livro(request):
 
 def sobre(request):
     return render(request, 'sobre.html')
+
+def lerlivro(request):
+    return render(request, 'lerlivro.html')

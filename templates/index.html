@@ -14,7 +14,7 @@
 
 <body>
     <header class="gradient d-flex justify-content-between align-items-center p-3 shadow">
-        <h1><a class="branco text-decoration-none" href="index.html">TÍTULO PROJETO</a></h1>
+        <h1><a class="branco text-decoration-none" href="{% url 'home' %}">TÍTULO PROJETO</a></h1>
         <nav>
             <ul class="nav">
                 <li class="nav-item d-none d-md-inline-block"><a class="nav-link verdeTexto bg-white rounded-5 fw-bold"
@@ -40,7 +40,7 @@
             <img src="static/imgs/whitebook.svg" alt="" height="50">
             <h4 class="text-center w-75">Explore a história e descubra como pequenas ações podem gerar grandes mudanças!
                 <h4>
-                    <button class="btn-custom"><a href="livro.html" class="mx-auto btn text-white fw-bold">Leia o
+                    <button class="btn-custom"><a href="{% url 'livro' %}" class="mx-auto btn text-white fw-bold">Leia o
                             livro!</a></button>
         </div>
     </section>
@@ -167,7 +167,7 @@
                     <h2 class="fw-bold">Saiba mais sobre essa iniciativa!</h2>
                     <p class="lead">Conheça mais sobre nosso projeto de extensão, nossa missão e impacto. Clique no
                         botão abaixo para saber mais!</p>
-                    <a href="sobre.html" class="btn btn-light text-dark fw-bold">Saiba mais!</a>
+                    <a href="{% url 'sobre' %}" class="btn btn-light text-dark fw-bold">Saiba mais!</a>
                 </div>
                 <div class="col-md-6 text-center">
                     <img src="static/imgs/logo if.svg" height="200" alt="IFRN-logo">

@@ -13,7 +13,7 @@
 
 <body>
     <header class="gradient d-flex justify-content-between align-items-center p-3 shadow">
-        <h1><a class="branco text-decoration-none" href="index.html">TÍTULO PROJETO</a></h1>
+        <h1><a class="branco text-decoration-none" href="{% url 'home' %}">TÍTULO PROJETO</a></h1>
         <nav>
             <ul class="nav">
                 <li class="nav-item d-none d-md-inline-block"><a class="nav-link text-white"
@@ -54,7 +54,7 @@
                     <div class="card-body">
                         <h5 class="card-title fw-bold">Leia o Livro em 3D</h5>
                         <p class="card-text">Explore o livro interativo em 3D com animações imersivas.</p>
-                        <a href="lerlivro.html" class="btn btn-success btn-lg mt-2">Acessar Livro 3D</a>
+                        <a href="{% url 'lerlivro' %}" class="btn btn-success btn-lg mt-2">Acessar Livro 3D</a>
                     </div>
                 </div>
             </div>

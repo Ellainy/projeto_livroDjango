@@ -1,13 +1,18 @@
 from django.shortcuts import render
+from .models import HomePage, Livro, Sobre, Pagina
 
 def home(request):
-    return render(request, 'index.html')
+    home_page = HomePage.objects.first() 
+    return render(request, 'index.html', {'home_page': home_page})
 
 def livro(request):
-    return render(request, 'livro.html')
+    livro = Livro.objects.first()
+    #paginas = livro.paginas.all()  
+    return render(request, 'livro.html', {'livro': livro})
 
 def sobre(request):
-    return render(request, 'sobre.html')
+    sobre_info = Sobre.objects.first()  
+    return render(request, 'sobre.html', {'sobre': sobre_info})
 
 def lerlivro(request):
     return render(request, 'lerlivro.html')
